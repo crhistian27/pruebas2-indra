@@ -56,17 +56,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					 e.CUSTOMER_NAME AS nomusu,
 					 e.SURNAME_1 AS apeusu
 					  FROM gcgt_re_reading r
-					   INNER JOIN GCGT_RE_MEASUREMENT_POINT m on m.ID_MEASURING_POINT = r.ID_MEASURING_POINT
-					   INNER JOIN GCCOM_SECTOR_SUPPLY s on s.ID_SECTOR_SUPPLY  = m.ID_SECTOR_SUPPLY
-					   INNER JOIN GCCOM_CONTRACTED_SERVICE c on c.ID_SECTOR_SUPPLY  = s.ID_SECTOR_SUPPLY
+					   INNER JOIN gcgt_re_measurement_point m on m.ID_MEASURING_POINT = r.ID_MEASURING_POINT
+					   INNER JOIN gccom_sector_supply s on s.ID_SECTOR_SUPPLY  = m.ID_SECTOR_SUPPLY
+					   INNER JOIN gccom_contracted_service c on c.ID_SECTOR_SUPPLY  = s.ID_SECTOR_SUPPLY
 					   INNER JOIN gccom_payment_form f on f.ID_PAYMENT_FORM  = c.ID_PAYMENT_FORM 
 					   INNER JOIN gccd_relationship e on e.ID_RELATIONSHIP  = f.ID_CUSTOMER 
 					   INNER JOIN gccc_customer_type t on t.COD_DEVELOP   = e.CUSTOMER_TYPE  
 				    	    WHERE r.READING_DATE > DATE_SUB((SELECT  MAX(r.READING_DATE) 
 							 				FROM gcgt_re_reading r
-											 INNER JOIN GCGT_RE_MEASUREMENT_POINT m on m.ID_MEASURING_POINT = r.ID_MEASURING_POINT
-											 INNER JOIN GCCOM_SECTOR_SUPPLY s on s.ID_SECTOR_SUPPLY  = m.ID_SECTOR_SUPPLY
-											 INNER JOIN GCCOM_CONTRACTED_SERVICE c on c.ID_SECTOR_SUPPLY  = s.ID_SECTOR_SUPPLY
+											 INNER JOIN gcgt_re_measurement_point m on m.ID_MEASURING_POINT = r.ID_MEASURING_POINT
+											 INNER JOIN gccom_sector_supply s on s.ID_SECTOR_SUPPLY  = m.ID_SECTOR_SUPPLY
+											 INNER JOIN gccom_contracted_service c on c.ID_SECTOR_SUPPLY  = s.ID_SECTOR_SUPPLY
 											 INNER JOIN gccom_payment_form f on f.ID_PAYMENT_FORM  = c.ID_PAYMENT_FORM 
 											 INNER JOIN gccd_relationship e on e.ID_RELATIONSHIP  = f.ID_CUSTOMER 
 											 INNER JOIN gccc_customer_type t on t.COD_DEVELOP   = e.CUSTOMER_TYPE  

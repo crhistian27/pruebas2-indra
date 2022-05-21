@@ -108,7 +108,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<script src="<?php echo base_url()?>assets/sweetalert2/sweetalert2.all.min.js"></script>
 		<script src="<?php echo base_url();?>assets/moments/moments.js"></script>	
 		<script src="<?php echo base_url();?>assets/moments/moment-with-locales.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.5.3/math.js" integrity="sha512-pRtih3rN7XIX59czB+hZ5OKR7NuOWmVg/2TI3YGC5izj2kDPaCXOpzS5sIMBs+/3beEAXQOiKqS37tfCuAZToA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script>
 
 			var baseUrl = "<?php echo base_url()?>";
